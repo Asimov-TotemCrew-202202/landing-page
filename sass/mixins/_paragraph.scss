@@ -1,0 +1,70 @@
+@import "../breakpoints";
+
+@mixin p1($font-weight: 500) {
+  font-size: 16px;
+  font-weight: $font-weight;
+  line-height: 1.3;
+
+  @media screen and (min-width: $tablet-lg) {
+    font-size: 18px;
+    line-height: 1.4;
+  }
+}
+
+@mixin p2($font-weight: 500) {
+  font-size: 14px;
+  font-weight: $font-weight;
+  line-height: 1.3;
+
+  @media screen and (min-width: $tablet-lg) {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+}
+
+@mixin p3($font-weight: 500) {
+  font-size: 12px;
+  font-weight: $font-weight;
+  line-height: 1.3;
+
+  @media screen and (min-width: $tablet-lg) {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+}
+
+%p1-bold {
+  @include p1(700);
+}
+
+%p1-medium {
+  @include p1(500);
+}
+
+%p1-regular {
+  @include p1(400);
+}
+
+%p2-bold {
+  @include p2(700);
+}
+
+%p2-medium {
+  @include p2(500);
+}
+
+%p2-regular {
+  @include p2(400);
+}
+
+%p3-bold {
+  @include p3(700);
+}
+
+%p3-medium {
+  @include p3(500);
+}
+
+%p3-regular {
+  @include p3(400);
+}

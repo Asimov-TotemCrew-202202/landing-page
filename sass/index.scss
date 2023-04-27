@@ -1,0 +1,233 @@
+@import "buttons";
+@import "config";
+@import "mixins/mixins";
+@import "breakpoints";
+@import "utils";
+
+// How use sass?
+// Install sass
+// Write in your console "sass --watch sass:css"
+
+.root {
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+//Navbar
+.navbar {
+  @extend %wrapper-full;
+  width: 100%;
+  position: fixed;
+  background-color: $secondary-color-700;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  z-index: 10;
+
+  .logo {
+    width: 93px;
+  }
+
+  .content {
+    display: none;
+    align-items: center;
+    gap: 44px;
+
+    @media (min-width: $phone-xl) {
+      display: flex;
+    }
+
+    ul {
+      display: flex;
+      @extend %b-small;
+      gap: 24px;
+      color: $secondary-text-color;
+    }
+
+    a {
+      @extend %b-small;
+    }
+  }
+
+  .menu-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+
+    span {
+      display: block;
+      width: 18px;
+      height: 2px;
+      background: $white-color;
+      transform-origin: 0 100%;
+      transition: all 200ms;
+    }
+
+    .active-line1 {
+      transform: translate(-1px, -3px) rotate(45deg);
+    }
+
+    .active-line2 {
+      opacity: 0;
+    }
+
+    .active-line3 {
+      transform: rotate(-45deg);
+    }
+
+    @media (min-width: $phone-xl) {
+      display: none;
+    }
+  }
+}
+
+//Sidebar
+.active-sidebar {
+  transform: translate(-100%, 0px);
+}
+
+.sidebar {
+  position: absolute;
+  z-index: 9;
+  left: 100%;
+  width: 100%;
+  height: 100vh;
+  background-color: $secondary-color-700;
+  color: $secondary-text-color;
+  transition: all 200ms;
+  padding: 57px 16px;
+
+  &__list {
+    li {
+      @extend %b-small;
+      padding: 16px 0;
+      border-bottom: 1px solid rgba(#fbfcfb, 0.2);
+    }
+  }
+
+  a {
+    @extend %b-small;
+    margin-top: 32px;
+  }
+}
+
+//Hero
+.hero {
+  .wrapper {
+    @extend %wrapper-section;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 116px;
+
+    @media (min-width: $tablet-lg) {
+      padding-top: 150px;
+    }
+  }
+  .title {
+    @extend %h1-bold;
+    padding-bottom: 24px;
+    max-width: 714px;
+
+    @media (min-width: $tablet-lg) {
+      padding-bottom: 40px;
+    }
+
+    span {
+      background: linear-gradient(
+        180deg,
+        $primary-color-300 0%,
+        $primary-color-600 100%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  }
+  .subtitle {
+    @extend %p1-bold;
+    padding-bottom: 8px;
+    @media (min-width: $tablet-lg) {
+      padding-bottom: 12px;
+    }
+  }
+  .paragraph {
+    @extend %p1-regular;
+    padding-bottom: 24px;
+    max-width: 614px;
+  }
+  a {
+    @extend %b-large;
+    padding: 12px 28px;
+    @media (min-width: $tablet-lg) {
+      padding: 12px 36px;
+    }
+  }
+}
+
+//Users
+.users {
+  .wrapper {
+    @extend %wrapper-section;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 80px;
+  }
+
+  &__title {
+    @extend %p1-bold;
+    padding: 0 16px 34px;
+    text-align: center;
+  }
+
+  .cards {
+    display: grid;
+    gap: 16px;
+
+    @media (min-width: $phone-xl) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: $tablet-lg) {
+      gap: 36px;
+    }
+
+    .card {
+      background-color: $neutral-color-100;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 0;
+      align-items: center;
+      padding: 16px 30px;
+
+      @media (min-width: $phone-xl) {
+        max-width: 380px;
+      }
+
+      @media (min-width: $tablet-lg) {
+        padding: 24px 34px;
+      }
+
+      &__title {
+        @extend %p1-bold;
+        padding: 12px 0;
+      }
+
+      &__paragraph {
+        @extend %p2-regular;
+        padding-bottom: 16px;
+      }
+
+      a {
+        margin-top: auto;
+        @extend %b-medium;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,72 @@
+// colors
+$primary-color-1000: #1b3585;
+$primary-color-900: #2243a8;
+$primary-color-800: #274ab2;
+$primary-color-700: #2c53c9;
+$primary-color-600: #3d5afe;
+$primary-color-500: #677eff;
+$primary-color-400: #8d9eff;
+$primary-color-300: #bac4ff;
+$primary-color-200: #d4dbff;
+$primary-color-100: #e3e8ff;
+
+$secondary-color-1000: #000626;
+$secondary-color-900: #000626;
+$secondary-color-800: #000626;
+$secondary-color-700: #000626;
+$secondary-color-600: #0b102b;
+$secondary-color-500: #3f445e;
+$secondary-color-400: #7e8294;
+$secondary-color-300: #bec1cc;
+$secondary-color-200: #e3e4eb;
+$secondary-color-100: #ebebec;
+
+$neutral-color-1000: #151f19;
+$neutral-color-900: #222f28;
+$neutral-color-800: #303f36;
+$neutral-color-700: #3f4d45;
+$neutral-color-600: #5d6b63;
+$neutral-color-500: #7c8982;
+$neutral-color-400: #9ba6a0;
+$neutral-color-300: #bbc3be;
+$neutral-color-200: #e4ebe7;
+$neutral-color-100: #fbfcfb;
+
+$primary-text-color: #000;
+$secondary-text-color: #fbfcfb;
+
+$white-color: #fff;
+$black-color: #000;
+
+// text
+$font-base: "Inter", sans-serif;
+
+// weight
+$regular: 400;
+$medium: 500;
+$bold: 700;
+
+// button
+button {
+  display: flex;
+  border-radius: 0;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    outline: none;
+  }
+}
+
+// --------------------------------------
+* {
+  padding: 0;
+  margin: 0;
+  position: relative;
+  box-sizing: border-box;
+  font-family: $font-base;
+  list-style: none;
+}

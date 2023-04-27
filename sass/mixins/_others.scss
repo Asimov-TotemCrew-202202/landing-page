@@ -1,0 +1,78 @@
+@import "../breakpoints";
+
+@mixin l1($font-weight: 500) {
+  font-size: 12px;
+  font-weight: $font-weight;
+  line-height: 1.1;
+}
+
+@mixin l2($font-weight: 500) {
+  font-size: 10px;
+  font-weight: $font-weight;
+  line-height: 1.1;
+}
+
+@mixin link($font-size: 10px) {
+  font-size: $font-size;
+  font-weight: 500;
+  line-height: 1;
+}
+
+@mixin b($font-size: 10px) {
+  font-size: $font-size;
+  font-weight: 500;
+  line-height: 1;
+}
+
+%l1-bold {
+  @include l1(700);
+}
+
+%l1-medium {
+  @include l1(500);
+}
+
+%l1-regular {
+  @include l1(400);
+}
+
+%l2-bold {
+  @include l2(700);
+}
+
+%l2-medium {
+  @include l2(500);
+}
+
+%l2-regular {
+  @include l2(400);
+}
+
+%link-small {
+  @include link(14px);
+}
+
+%link-medium {
+  @include link(16px);
+}
+
+%link-large {
+  @include link(20px);
+}
+
+%b-large {
+  @include b(20px);
+}
+
+%b-medium {
+  @include b(16px);
+}
+
+%b-small {
+  @include b(14px);
+}
+
+%b-bold {
+  @include b(20px);
+  font-weight: 600;
+}

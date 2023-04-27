@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Title -->
+    <title>Asimov</title>
+    <meta name="author" content="TotemCrew" />
+    <meta name="theme-color" content="#3d5afe" />
+    <meta name="description" content="Asimov Landing Page" />
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+
+    <!-- Styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <div class="root">
+      <!-- Navbar -->
+      <nav class="navbar">
+        <img src="images/logo.png" class="logo" alt="Asimov logo" />
+        <div class="content">
+          <ul>
+            <li>Para directores</li>
+            <li>Para profesores</li>
+            <li>Planes</li>
+            <li>Sobre nosotros</li>
+          </ul>
+          <a href="https://asimov-agile-202202.web.app/" target="_blank" class="btn btn-primary">Empezar</a>
+        </div>
+        <button type="button" class="menu-btn">
+          <span class="line1"></span>
+          <span class="line2"></span>
+          <span class="line3"></span>
+        </button>
+      </nav>
+
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <ul class="sidebar__list">
+          <li>Para directores</li>
+          <li>Para profesores</li>
+          <li>Planes</li>
+          <li>Sobre nosotros</li>
+        </ul>
+        <a href="https://asimov-agile-202202.web.app/" target="_blank" class="btn btn-primary">Empezar</a>
+      </aside>
+
+      <!-- Hero -->
+      <section class="hero">
+        <div class="wrapper">
+          <h1 class="title">Plataforma de gestión de <span>competencias</span></h1>
+          <p class="subtitle">Evalua el cumplimiento de competencias escolares</p>
+          <p class="paragraph">Una plataforma que se enfoca en las competencias que realmente importan</p>
+          <a href="https://asimov-agile-202202.web.app/" target="_blank" class="btn btn-primary">Empezar</a>
+        </div>
+      </section>
+
+      <section class="users">
+        <div class="wrapper">
+          <h2 class="users__title">La mejor herramienta para la gestión de competencias escolares</h2>
+          <div class="cards">
+            <article class="card">
+              <img src="images/manager.png" alt="Director leyendo" />
+              <p class="card__title">Para directores</p>
+              <p class="card__paragraph">Te permitirá gestionar y medir el avance de enseñanza de los profesores según las competencias asignadas a cada curso.</p>
+              <a href="#director" class="btn btn-outline-primary">Mas información</a>
+            </article>
+            <article class="card">
+              <img src="images/teacher.png" alt="Profesor enseñando" />
+              <p class="card__title">Para profesores</p>
+              <p class="card__paragraph">Te permitirá medir las competencias aprendidas de tus alumnos en base al plan establecido para el curso.</p>
+              <a href="#profesor" class="btn btn-outline-primary">Mas información</a>
+            </article>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script src="js/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+%wrapper-section {
+  margin: auto;
+  max-width: 1440px;
+  padding-right: 16px;
+  padding-left: 16px;
+
+  @media (min-width: $phone-xl) {
+    padding-right: 24px;
+    padding-left: 24px;
+  }
+
+  @media (min-width: $tablet-lg) {
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+}
+
+%wrapper-full {
+  padding-right: 16px;
+  padding-left: 16px;
+
+  @media (min-width: $phone-xl) {
+    padding-right: 24px;
+    padding-left: 24px;
+  }
+
+  @media (min-width: $tablet-lg) {
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+
+  @media (min-width: $desktop-md) {
+    padding-left: calc(50vw - 720px + 60px);
+    padding-right: calc(50vw - 720px + 60px);
+  }
+}
+

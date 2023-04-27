@@ -1,0 +1,20 @@
+@import "config";
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 16px;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+.btn-primary {
+  background-color: $primary-color-600;
+  color: $secondary-text-color;
+}
+
+.btn-outline-primary {
+    border: 1px solid $primary-color-600;
+    background-color: $white-color;
+}
