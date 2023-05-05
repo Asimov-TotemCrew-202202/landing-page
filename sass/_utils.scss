@@ -35,3 +35,14 @@
   }
 }
 
+%custom-list-style {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  color: default;
+  left: -18px;
+  top: 6px;
+}

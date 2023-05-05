@@ -228,9 +228,86 @@
 
       a {
         margin-top: auto;
+        color: $primary-color-600;
         @extend %b-medium;
       }
     }
   }
 }
 
+//Benefits
+.benefits {
+  background-color: $secondary-color-1000;
+  color: $secondary-text-color;
+  margin-top: 40px;
+
+  .wrapper {
+    @extend %wrapper-section;
+    padding-top: 42px;
+    padding-bottom: 42px;
+  }
+
+  &__title {
+    @extend %p1-bold;
+    text-align: center;
+    padding-bottom: 32px;
+
+    @media (min-width: $tablet-lg) {
+      padding-bottom: 48px;
+    }
+  }
+
+  //article
+  .article {
+    display: flex;
+    flex-direction: column;
+    gap: 44px;
+    padding-bottom: 40px;
+    @media (min-width: $phone-xl) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__content {
+      &--topic {
+        @extend %p2-bold;
+        color: $primary-color-600;
+        padding-bottom: 4px;
+      }
+      &--title {
+        @extend %p1-bold;
+        padding-bottom: 16px;
+      }
+      ul {
+        padding-left: 26px;
+        li {
+          @extend %p2-regular;
+          &:not(:last-child) {
+            padding-bottom: 8px;
+          }
+          &::before {
+            @extend %custom-list-style;
+            background-color: $primary-color-600;
+          }
+        }
+      }
+    }
+
+    .image {
+      display: grid;
+      justify-items: center;
+      img {
+        max-width: 100%;
+        max-height: 270px;
+      }
+    }
+  }
+
+  //teacher
+  .teacher {
+    @media (min-width: $phone-xl) {
+      flex-direction: row-reverse;
+    }
+  }
+}
