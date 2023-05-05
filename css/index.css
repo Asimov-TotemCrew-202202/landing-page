@@ -10,6 +10,15 @@ button:hover, button:focus {
   outline: none;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -48,6 +57,15 @@ button {
 }
 button:hover, button:focus {
   outline: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
 }
 
 * {
@@ -184,6 +202,9 @@ button:hover, button:focus {
   z-index: 10;
 }
 .navbar .logo {
+  max-height: 24px;
+}
+.navbar .logo > img {
   width: 93px;
 }
 .navbar .content {
@@ -234,7 +255,7 @@ button:hover, button:focus {
 }
 
 .sidebar {
-  position: absolute;
+  position: fixed;
   z-index: 9;
   left: 100%;
   width: 100%;
