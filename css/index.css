@@ -77,30 +77,39 @@ a {
       font-size: 56px;
       line-height: 1.1; } }
 
-.app__content--title {
+.app__content--title, .suscriptions .plans .plan__content--title {
   font-size: 32px;
   font-weight: 700;
   line-height: 1.2; }
   @media screen and (min-width: 1024px) {
-    .app__content--title {
+    .app__content--title, .suscriptions .plans .plan__content--title {
       font-size: 48px;
       line-height: 1.2; } }
 
-.hero .subtitle, .users__title, .users .cards .card__title, .benefits__title, .benefits .article__content--title {
+.suscriptions__title {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.2; }
+  @media screen and (min-width: 1024px) {
+    .suscriptions__title {
+      font-size: 40px;
+      line-height: 1.2; } }
+
+.hero .subtitle, .users__title, .users .cards .card__title, .benefits__title, .benefits .article__content--title, .suscriptions .plans .plan__content--description span {
   font-size: 16px;
   font-weight: 700;
   line-height: 1.3; }
   @media screen and (min-width: 1024px) {
-    .hero .subtitle, .users__title, .users .cards .card__title, .benefits__title, .benefits .article__content--title {
+    .hero .subtitle, .users__title, .users .cards .card__title, .benefits__title, .benefits .article__content--title, .suscriptions .plans .plan__content--description span {
       font-size: 18px;
       line-height: 1.4; } }
 
-.hero .paragraph, .app__content--description {
+.hero .paragraph, .app__content--description, .suscriptions__description, .suscriptions .plans .plan__content--description {
   font-size: 16px;
   font-weight: 400;
   line-height: 1.3; }
   @media screen and (min-width: 1024px) {
-    .hero .paragraph, .app__content--description {
+    .hero .paragraph, .app__content--description, .suscriptions__description, .suscriptions .plans .plan__content--description {
       font-size: 18px;
       line-height: 1.4; } }
 
@@ -365,7 +374,9 @@ a {
       flex-direction: row-reverse; } }
 
 .app {
-  margin: 60px; }
+  margin-top: 60px;
+  margin-left: 60px;
+  margin-right: 60px; }
   .app .wrapper {
     position: relative;
     padding: 24px 24px 0 24px;
@@ -380,7 +391,7 @@ a {
     content: "";
     z-index: 0;
     position: absolute;
-    background: linear-gradient(180deg, #3D5AFE 0%, #BAC4FF 100%);
+    background: linear-gradient(180deg, #bac4ff 0%, #3d5afe 100%);
     border-radius: 8px;
     top: 0;
     left: 0;
@@ -431,5 +442,62 @@ a {
         .app .image img {
           max-width: 498px;
           width: auto; } }
+
+.suscriptions {
+  margin-top: 64px;
+  margin-left: 16px;
+  margin-right: 16px;
+  display: flex;
+  justify-content: center; }
+  .suscriptions__title {
+    text-align: center;
+    margin-bottom: 12px; }
+  .suscriptions__description {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 32px; }
+  .suscriptions .plans {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px; }
+    @media (min-width: 768px) {
+      .suscriptions .plans {
+        flex-direction: row;
+        justify-content: space-between; } }
+    .suscriptions .plans .plan {
+      display: flex;
+      align-items: center;
+      flex-direction: column; }
+      .suscriptions .plans .plan__content {
+        background-color: #fbfcfb;
+        padding: 24px 64px;
+        border-radius: 8px;
+        text-align: center; }
+        .suscriptions .plans .plan__content--title {
+          text-align: center; }
+        .suscriptions .plans .plan__content--description {
+          max-width: 233px;
+          margin-top: 12px;
+          margin-bottom: 20px; }
+        .suscriptions .plans .plan__content--description p {
+          padding-bottom: 20px; }
+        .suscriptions .plans .plan__content--actions {
+          display: flex;
+          justify-content: center; }
+          .suscriptions .plans .plan__content--actions .btn {
+            width: 200px; }
+      .suscriptions .plans .plan .features {
+        margin-top: 24px;
+        display: grid;
+        flex-direction: column;
+        row-gap: 16px; }
+        .suscriptions .plans .plan .features .feature {
+          display: grid;
+          grid-template-columns: 40px auto;
+          align-items: center; }
+          .suscriptions .plans .plan .features .feature img {
+            margin-right: 20px; }
 
 /*# sourceMappingURL=index.css.map */
