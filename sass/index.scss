@@ -351,7 +351,6 @@
 
   &__content {
     z-index: 1;
-    min-width: 291px;
 
     @media (min-width: $tablet-lg) {
       margin-top: 26px;
@@ -360,15 +359,14 @@
     &--title {
       @extend %h2-bold;
       padding-bottom: 24px;
-      max-width: 500px;
+      max-width: 410px;
       color: $white-color;
     }
   
     &--description {
       @extend %p1-regular;
       padding-bottom: 24px;
-      max-width: 582px;
-      min-width: 280px;
+      max-width: 580px;
       color: $white-color;
     }
 
@@ -376,19 +374,18 @@
       display: flex;
       flex-wrap: wrap;
       gap: 16px;
+      min-width: none;
 
       @media (min-width: $phone-xl) {
         gap: 24px;
+        min-width: 314px;
       }
   
       .btn {
         @extend %b-medium;
-        padding: 10px;
       }
   
-      .btn .logo {
-        width: 24px;
-        height: 24px;
+      .btn img {
         margin-right: 8px;
       }
     }
@@ -506,6 +503,83 @@
         }
       }
     }
-
   } 
+}
+
+// footer
+.footer {
+  background-color: $secondary-color-1000;
+  color: $white-color;
+  margin-top: 64px;
+  padding: 24px 16px 32px 16px;
+
+  @media (min-width: $phone-xl) {
+    padding: 32px 60px;
+  }
+
+  .asimov {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+
+    &__detail {
+      @extend %p2-regular;
+      display: flex;
+      flex-direction: column;
+      row-gap: 16px;
+      margin-bottom: 28px;
+    }
+
+    &__apps {
+      display: flex;
+      justify-content: center;
+      column-gap: 16px;
+
+      button {
+        @extend %b-medium;
+      }
+
+      button span {
+        display: none;
+
+        @media (min-width: $phone-xl) {
+          display: inline;
+        }
+      }
+
+      button img {
+        margin-right: none;
+
+        @media (min-width: $phone-xl) {
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+
+  .navbar__botton {
+    margin-bottom: 44px;
+    display: block;
+
+    @media (min-width: $phone-xl) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &--item {
+      @extend %b-small;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid $white-color;
+      margin-bottom: 8px;
+
+      @media (min-width: $phone-xl) {
+        border-bottom: none;
+      }
+    }
+  }
+
+  .rights {
+    text-align: center;
+  }
 }
